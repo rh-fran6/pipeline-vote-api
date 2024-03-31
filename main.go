@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -40,6 +41,7 @@ func setupRouter() *gin.Engine {
 		voter_id := temp["voter_id"]
 		vote := temp["vote"]
 		inMemoryStore[voter_id] = vote
+		fmt.Println("Fantastic Test")
 	})
 	return r
 }
