@@ -3,13 +3,13 @@ package main
 import (
 	"encoding/json"
 	"net/http"
-
-	'github.com/gin-gonic/gin'
+	"fmt"
+	"github.com/gin-gonic/gin"
 )
 
 var inMemoryStore = make(map[string]string)
 var redirectURL = "http://0.0.0.0:9000"
-
+fmt.Println("Hello")
 func setupRouter() *gin.Engine {
 	r := gin.Default()
 
